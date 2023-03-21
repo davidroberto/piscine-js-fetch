@@ -19,7 +19,10 @@ const recipes = [
 ];
 
 const displayRandomRecipe = () => {
+  // sélectionne la div qui va contenir les recette
   const recipesContainer = document.querySelector("#recipes");
+
+  // vide la div pour éviter que les recettes s'empilent à chaque click
   recipesContainer.innerHTML = "";
 
   // génére une clé aléatoire dans le tableau recipes
@@ -39,7 +42,6 @@ const displayRandomRecipe = () => {
   imgToCreate.src = recipes[randomIndex].image;
 
   // insère les éléments dans le DOM
-
   recipesContainer.append(titleToCreate, paragraphToCreate, imgToCreate);
 };
 
